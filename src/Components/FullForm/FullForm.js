@@ -10,7 +10,7 @@ import './FullForm.css'
 
 const FullForm = () => {
     return (
-        <div className="container m-60 p-10 border-2 rounded-xl">
+        <div className="container max-w-l m-60 p-10 border-2 rounded-xl">
             <forms>
                 <p className="text-6xl font-thin text-red-500">Flight deals with Virgin Atlantic</p>
                 <div role="radiogroup" class="mx-auto py-12 flex">
@@ -32,26 +32,18 @@ const FullForm = () => {
                     </div>
                 </div>
                 <div className=" container grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-1 ">
-                    <div className="flex flex-col justify-center align-center ">
-                        <FromInputField></FromInputField>
-                        <br />
-                        <PassengerInput></PassengerInput>
 
-                    </div>
-                    <div className="flex flex-col justify-center align-center ">
-                        <ToInputField></ToInputField>
-                        <br />
-                        <Voucher />
-                    </div>
+                    <FromInputField></FromInputField>
+                    <ToInputField></ToInputField>
+                    <Departure></Departure>
+                    <PassengerInput></PassengerInput>
+                    <Voucher />
+                    <button type="submit" class="bg-red-700 hover:bg-red-100 hover:text-gray-800 text-gray-100 font-bold  border-b-4 border-blue-dark hover:border-blue rounded">
+                        Book Now
+                    </button>
 
-                    <div className="flex flex-col justify-center align-center ">
-                        <Departure></Departure>
-                        <button type="submit" class="bg-red-700 hover:bg-red-100 hover:text-gray-800 text-gray-100 font-bold py-2 px-40 border-b-4 border-blue-dark hover:border-blue rounded">
-                            Book Now
-                        </button>
-                    </div>
                 </div>
-                <br />
+
 
 
             </forms>
